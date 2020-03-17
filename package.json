@@ -1,0 +1,13 @@
+{
+  "name": "login-with-apple",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Vadim Brodsky <vadim.brodsky@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "@hapi/hapi": "^19.1.1"
+  }
+}
