@@ -16,7 +16,7 @@ let init = async () => {
       html: {
         module: require('handlebars'),
         compileMode: 'sync',
-        isCached: process.env.NODE_ENV === 'production',
+        isCached: !!(process.env.NODE_ENV === 'production'),
       },
     },
     layout: 'default',
