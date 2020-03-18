@@ -25,13 +25,23 @@ let init = async () => {
     relativeTo: __dirname,
   });
 
-  server.route({
-    method: 'GET',
-    path: '/',
-    handler: (request, h) => {
-      return h.view('index', { title: 'Homepage' });
+  server.route([
+    {
+      method: 'GET',
+      path: '/',
+      handler: (request, h) => {
+        return h.view('index', { title: 'Homepage' });
+      },
     },
-  });
+    {
+      method: 'POST',
+      path: '/confirm',
+      handler: (request, h) => {
+        console.log(request.payload);
+        return { status: 200 };
+      },
+    },
+  ]);
 
   await server.start();
   console.log('Server is running on %s', server.info.uri);
