@@ -12,7 +12,8 @@
     "@hapi/hapi": "^19.1.1",
     "@hapi/hoek": "^9.0.4",
     "@hapi/vision": "^6.0.0",
-    "handlebars": "^4.7.3"
+    "handlebars": "^4.7.3",
+    "jsonwebtoken": "^8.5.1"
   },
   "devDependencies": {
     "nodemon": "^2.0.2"
