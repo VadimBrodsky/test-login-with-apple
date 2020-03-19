@@ -5,7 +5,8 @@
   "author": "Vadim Brodsky <vadim.brodsky@gmail.com>",
   "license": "MIT",
   "engines": {
-    "node": "12.13.x"
+    "node": "12.13.x",
+    "yarn": "1.x"
   },
   "scripts": {
     "start": "node index.js",
