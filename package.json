@@ -4,6 +4,9 @@
   "main": "index.js",
   "author": "Vadim Brodsky <vadim.brodsky@gmail.com>",
   "license": "MIT",
+  "engines": {
+    "node": "12.13.x"
+  },
   "scripts": {
     "start": "node index.js",
     "dev": "nodemon index.js"
