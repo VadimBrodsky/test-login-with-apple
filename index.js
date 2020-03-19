@@ -2,11 +2,14 @@
 let Path = require('path');
 let Hapi = require('@hapi/hapi');
 let Hoek = require('@hapi/hoek');
+let { NODE_ENV, PORT } = process.env;
+
+const isProduction = NODE_ENV === 'production';
 
 let init = async () => {
   let server = Hapi.server({
-    port: 3000,
-    host: 'localhost',
+    port: Number.parseInt(PORT) || 3000,
+    host: '0.0.0.0',
   });
 
   await server.register(require('@hapi/vision'));
@@ -16,7 +19,7 @@ let init = async () => {
       html: {
         module: require('handlebars'),
         compileMode: 'sync',
-        isCached: !!(process.env.NODE_ENV === 'production'),
+        isCached: isProduction,
       },
     },
     layout: 'default',
