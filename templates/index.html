@@ -9,11 +9,16 @@
 <!-- <div id="appleid-signin" data-color="white" data-border="false" data-type="continue"></div> -->
 
 <script type="text/javascript">
+  const clientId = 'com.herokuapp.hapi-apple-login.client';
+  const scope = 'scope=name email';
+  const redirectURI = 'https://hapi-apple-login.herokuapp.com/welcome';
+  const state = 'my-aweosme-state';
+
   AppleID.auth.init({
-    clientId: '[CLIENT_ID]',
-    scope: '[SCOPES]',
-    redirectURI: '[REDIRECT_URI]',
-    state: '[STATE]',
+    clientId,
+    scope,
+    redirectURI: ,
+    state,
     usePopup: false, //or false defaults to false
   });
 </script>
